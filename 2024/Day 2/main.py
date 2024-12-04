@@ -6,7 +6,7 @@ def main():
         reports = [[int(r) for r in line.split()] for line in fr]
 
     # Part 1
-    print(sum([1 for report in reports if is_safe(report)]))
+    print(sum(1 for report in reports if is_safe(report)))
 
     # Part 2
     safe_count = 0
@@ -43,7 +43,6 @@ def is_safe(report):
             return False
 
     return True
-
 
 
 if __name__ == '__main__':

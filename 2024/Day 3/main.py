@@ -9,10 +9,10 @@ DONT_REGEX = r"don't\(\)"
 
 def main():
     with open(INPUT_FILE) as fr:
-        memory = ''.join([line for line in fr])
+        memory = ''.join(line for line in fr)
 
     # Part 1
-    print(sum([int(x) * int(y) for x, y in re.findall(MUL_GROUP_REGEX, memory)]))
+    print(sum(int(x) * int(y) for x, y in re.findall(MUL_GROUP_REGEX, memory)))
 
     # Part 2
     mul_sum = 0
